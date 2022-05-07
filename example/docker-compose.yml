@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  phpinfo:
+      image: a852203465/phpinfo:latest
+      container_name: phpinfo
+      build:
+        context: ./
+        dockerfile: Dockerfile
+      volumes:
+        - ./phpinfo.php:/var/www/html/phpinfo.php
+      ports:
+        - 8000:8080
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
