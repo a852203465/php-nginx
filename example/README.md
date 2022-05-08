@@ -8,7 +8,7 @@
 version: "3"
 services:
   phpinfo:
-      image: registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:1.0-fmp
+      image: registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:2.0-fmp
       container_name: phpinfo
       volumes:
         - ./phpinfo.php:/var/www/html/phpinfo.php
@@ -17,11 +17,11 @@ services:
 ```
 
 ### 1.2 产生新的镜像然后运行
-    基于`registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:1.0-fmp`镜像生成新镜像
+    基于`registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:2.0-fmp`镜像生成新镜像
 
 #### 1.2.1 Dockerfile 内容
 ```dockerfile
-FROM registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:1.0-fmp
+FROM registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:2.0-fmp
 ADD phpinfo.php /var/www/html/
 ```
 
