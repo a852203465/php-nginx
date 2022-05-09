@@ -1,4 +1,4 @@
-# 基于php7-nginx 镜像完成 php容器运行
+# 基于php8-nginx 镜像完成 php容器运行
 ## 1. 运行
     先执行根目录的build.sh文件生成base 镜像
 ### 1.1 直接使用镜像运行
