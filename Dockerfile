@@ -5,30 +5,41 @@ MAINTAINER Rong.Jia 852203465@qq.com
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk add --no-cache \
-      curl \
-      nginx \
-      php7 \
-      php7-ctype \
-      php7-curl \
-      php7-dom \
-      php7-fpm \
-      php7-gd \
-      php7-intl \
-      php7-mbstring \
-      php7-mysqli \
-      php7-opcache \
-      php7-openssl \
-      php7-phar \
-      php7-session \
-      php7-xml \
-      php7-xmlreader \
-      php7-zlib \
-      supervisor
+    curl \
+    nginx \
+    php7 \
+    php7-ctype \
+    php7-curl \
+    php7-dom \
+    php7-fpm \
+    php7-gd \
+    php7-intl \
+    php7-mbstring \
+    php7-mysqli \
+    php7-opcache \
+    php7-openssl \
+    php7-phar \
+    php7-session \
+    php7-xml \
+    php7-xmlreader \
+    php7-zlib \
+    php7-json \
+    php7-simplexml \
+    php7-zip \
+    php7-pdo_mysql \
+    php7-fileinfo \
+    php7-bcmath \
+    php7-xmlwriter \
+    supervisor
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/fpm-pool.conf /etc/php7/php-fpm.d/www.conf
 COPY conf/php.ini /etc/php7/conf.d/custom.ini
 COPY conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \
+    && chmod +x /usr/bin/composer \
+    && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 WORKDIR /var/www/html
 
