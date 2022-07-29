@@ -2,7 +2,7 @@
 
 ## 版本说明
 ### v1.0
- - 基于PHP 7.4.30, Nginx 1.20.2
+ - 基于PHP 7, Nginx 1.20.2
 
 ## 运行
 ### 自行build docker镜像
