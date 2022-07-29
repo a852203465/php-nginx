@@ -12,6 +12,7 @@
 
 ### 直接拉取镜像
  1. 直接在example目录下执行docker-compose up -d --build
+ 2. docker pull registry.cn-shenzhen.aliyuncs.com/a852203465/php-nginx:2.0-fmp
 
 
 
